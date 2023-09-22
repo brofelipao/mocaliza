@@ -1,0 +1,19 @@
+{
+  "name": "mocaliza",
+  "version": "1.0.0",
+  "description": "primeiro commit",
+  "main": "build/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brofelipao/mocaliza.git"
+  },
+  "author": "Luiz Monteiro <luiz.felipe.monteiro21@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brofelipao/mocaliza/issues"
+  },
+  "homepage": "https://github.com/brofelipao/mocaliza#readme"
+}
