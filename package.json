@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/brofelipao/mocaliza/issues"
   },
-  "homepage": "https://github.com/brofelipao/mocaliza#readme"
+  "homepage": "https://github.com/brofelipao/mocaliza#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.50.0",
+    "nodemon": "^3.0.1"
+  }
 }
