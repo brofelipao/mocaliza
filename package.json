@@ -2,9 +2,10 @@
   "name": "mocaliza",
   "version": "1.0.0",
   "description": "primeiro commit",
-  "main": "build/main.js",
+  "main": "src/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --watch src/** src/main.js"
   },
   "repository": {
     "type": "git",
