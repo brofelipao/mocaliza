@@ -1,4 +1,4 @@
-const { ModelBase } = require('./model_base')
+import { ModelBase } from'./model_base.js';
 
 class Category extends ModelBase {
     constructor(

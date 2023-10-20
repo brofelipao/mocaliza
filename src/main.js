@@ -1,8 +1,8 @@
-const express = require('express'); // Carrega a biblioteca dentro da variável express
-const sqlite3 = require('sqlite3');
-const { Category } = require('./models/category')
+import express from 'express'; // Carrega a biblioteca dentro da variável express
+import sqlite3 from 'sqlite3';
+import { Category } from './models/category.js';
 
-const db = new sqlite3.Database('mocaliza_db.db')
+const db = new sqlite3.Database('mocaliza_db.db');
 const app = express(); // Ao Carregar a biblioteca, o express cria uma função. Ao chamar a 
                        //função e atribuir para app, é criada uma instancia da biblioteca
 
