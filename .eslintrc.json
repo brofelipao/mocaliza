@@ -11,9 +11,9 @@
     "rules": {
         "semi": [
             "error", "always" // Para obrigar o uso de dois pontos
+        ],
+        "quotes": [
+            "error", "double" // Para impedir o uso de strings utilizando aspas duplas
         ]
-        // "quotes": [
-        //     "error", "double" // Para impedir o uso de strings utilizando aspas duplas
-        // ]
     }
 }
