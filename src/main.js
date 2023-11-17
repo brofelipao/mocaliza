@@ -7,37 +7,35 @@ const app = express(); // Ao Carregar a biblioteca, o express cria uma função.
                        //função e atribuir para app, é criada uma instancia da biblioteca
 
 db.serialize(() => {
-    db.run(`CREATE TABLE IF NOT EXISTS categories (
-        id INTEGER NOT NULL,
-        name VARCHAR(255) NOT NULL,
-        updatedAt TIMESTAMP,
-        createdAt TIMESTAMP,
-        active BOOLEAN,
-        CONSTRAINT categories_pk PRIMARY KEY (category_id)
-    );`);
-    db.run(`INSERT INTO categories(name) VALUES ('CARROS')`);
-    db.run(`INSERT INTO categories(name) VALUES ('MOTOS')`);
-    db.run(`INSERT INTO categories(name) VALUES ('TRATORES')`);
-    db.run(`INSERT INTO categories(name) VALUES ('SUV')`);
-    db.run(`INSERT INTO categories(name) VALUES ('MOTO')`);
+    // db.run(`CREATE TABLE IF NOT EXISTS categories (
+    //     id INTEGER NOT NULL,
+    //     name VARCHAR(255) NOT NULL,
+    //     updatedAt TIMESTAMP,
+    //     createdAt TIMESTAMP,
+    //     active BOOLEAN,
+    //     CONSTRAINT categories_pk PRIMARY KEY (id)
+    // );`);
+    // db.run(`INSERT INTO categories(name) VALUES ('CARROS')`);
+    // db.run(`INSERT INTO categories(name) VALUES ('MOTOS')`);
+    // db.run(`INSERT INTO categories(name) VALUES ('TRATORES')`);
+    // db.run(`INSERT INTO categories(name) VALUES ('SUV')`);
+    // db.run(`INSERT INTO categories(name) VALUES ('MOTO')`);
 });
 
 app.get('/', (request, response) => {
     var categories = []
     db.serialize(() => {
-        db.each(`SELECT id, nome from categories`, (err, row) => {
+        db.each(`SELECT id, name from categories`, (err, row) => {
             if (err){
                 throw err;
             }
-            var category = new Category(id = row.id, name = row.name);
+            console.log(row)
             categories.push(row);
         })
 
-        console.log(categories);
-    });
-
-    response.json({
-        date: Date.now()
+        response.json({
+            date: categories
+        });
     });
 });
 
